@@ -2,6 +2,7 @@
 #include <vanetza/common/runtime.hpp>
 #include <vanetza/dcc/data_request.hpp>
 #include <vanetza/dcc/interface.hpp>
+#include <vanetza/facilities/position_fix.hpp>
 #include <vanetza/geonet/areas.hpp>
 #include <vanetza/geonet/data_indication.hpp>
 #include <vanetza/geonet/mib.hpp>
@@ -69,6 +70,7 @@ public:
         RequestInterface request_interface;
         TransportHandler transport_interface;
         Runtime runtime;
+        facilities::PositionFix position;
         SecurityContext security;
         Router router;
     };

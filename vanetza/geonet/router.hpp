@@ -43,6 +43,11 @@ namespace dcc
     class RequestInterface;
 } // namespace dcc
 
+namespace facilities
+{
+    class PositionFix;
+} // namespace facilities
+
 namespace geonet
 {
 
@@ -157,11 +162,10 @@ public:
 
     /**
      * \brief Update router's local position vector
-     * \note GN Address of given LongPositionVector is ignored!
      *
-     * \param lpv Set positional data according to this argument
+     * \param fix current position fix
      */
-    void update(const LongPositionVector&);
+    void update_position(const facilities::PositionFix&);
 
     /**
      * \brief Register a transport protocol handler.
